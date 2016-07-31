@@ -1,0 +1,497 @@
+@charset "utf-8";
+
+/*** *** *** ***              *** *** *** ***/
+/*** *** *** ***   BASE CSS   *** *** *** ***/
+/*** *** *** ***              *** *** *** ***/
+
+@font-face{
+  font-family:"Chaparral Pro";
+  src:url("../fonts/ChaparralPro-Italic.otf");
+}
+@font-face{
+  font-family:"HelveticaNeueLTPro";
+  src:url("../fonts/HelveticaNeueLTPro-Md.otf");
+}
+@font-face{
+  font-family:"amazonebt";
+  src:url("../fonts/ufonts.com_amazonebt-regular-opentype.otf");
+}
+
+body {
+  margin: 0;
+  font-family: "HelveticaNeueLTPro";
+}
+
+a {
+  text-decoration: none;
+}
+
+button{
+  border: none;
+  background: none;
+}
+
+.btn_module{
+  border: 1px solid #e4e4e4;
+  background: linear-gradient(#fff, #ededed);
+  color: #ea212e;
+}
+
+.font_amazon{
+  text-align: center;
+  font-family: "amazonebt";
+}
+
+.font_chapparral{
+  font-family: "Chaparral Pro";
+}
+
+
+/*** *** *** ***              *** *** *** ***/
+/*** *** *** ***  Layout CSS  *** *** *** ***/
+/*** *** *** ***              *** *** *** ***/
+
+
+/*** *** *** ***  HEADER ë¶€ë¶„  *** *** *** ***/
+
+.header_gnb{
+  background-image: url("../images/header-gnb-bg.png");
+  background-size: 100% 48px;
+}
+
+.header_gnb li:first-child {
+  width: 41%;
+  text-align: left; 
+  padding-left: 7px; 
+  margin-right: 8%;
+}
+
+.header_gnb li:not(:first-child){
+  width: 15.3333%;
+}
+
+.header_gnb li a{
+  color: #fff;
+}
+
+.header_gnb li{
+  float: left;
+  height: 48px;
+  text-align: center;
+  line-height: 48px;
+}
+
+.header_gnb li:first-child a{
+  font-size: 0.75em; /* 12/16 */
+}
+
+.header_gnb li:not(:first-child) a{
+  font-size: 0.625em;
+}
+
+.header_gnb a span{
+  font-size: 1.16667em; /* 14/12  */
+}
+
+.index_header_lnb{
+  border-bottom: 1px solid #c6c6c6;
+}
+
+.index_header_lnb::before{
+  content:"";
+  display: block;
+  position:absolute;
+  width: 187px;
+  height: 49px;
+  top: 95px;
+  left:50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  background-image: url("../images/Shape_header_bg.png");
+  -webkit-background-size: cover;
+  background-size: cover;
+  
+}
+
+.index_header_lnb_home{
+  display: block;
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+}
+
+.index_header_lnb button{
+  height: 33px;
+  width: 54px;
+  margin: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 0.5625em;
+}
+
+.index_header_lnb button:first-child{
+  float: left;
+}
+
+.index_header_lnb button:not(:first-child){
+  float: right;
+}
+
+
+
+/*** *** *** ***  MAIN 영역  *** *** *** ***/
+
+/*** *** *** ***  케러셀  *** *** *** ***/
+.main_carousel{
+  position: relative; 
+  z-index:10; 
+}
+
+.carousel_window{
+  height: 287px;
+  width: 100%;
+  overflow: hidden;
+  /*background: purple;*/
+}
+
+.carousel_content_nav{
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.carousel_content_nav li{
+  float: left;
+  width: 12px;
+  height: 12px;
+  margin-right: 7px;
+  
+}
+
+.carousel_content_nav button{
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #fcbe2c;
+  border-radius: 90%;
+}
+
+/*케러셀 버튼*/
+
+.main_carousel > button{
+  position: absolute;
+  top: 50%;
+  width: 48px;
+  height: 66px;
+  padding: 0;
+  background-image: url("../images/carousel_arrow.png");
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.carousel_dir_right{
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.carousel_dir_left{
+  left: 0;
+  
+  transform: translateY(-50%) rotate(180deg);
+}
+
+
+
+/*** *** *** ***  메인 컨텐츠 영역­  *** *** *** ***/
+
+.main_wrapper{
+  width: 87.5%;
+  margin: 0 auto;
+}
+
+.main_announcement{
+  padding-bottom: 26px;
+  line-height: 2em; /* 6/16 */
+}
+
+.main_announcement article{
+  position: relative;
+}
+
+.main_announcement article p, q{
+  font-size: 0.75em; /* 12/16 */
+} 
+
+
+.main_announcement h2{
+  margin-bottom: 25px;
+  font-size: 1.375em; /* 22/16 */
+  color: #ea212e;
+}
+
+.main_announcement article:first-child{
+  margin-bottom: 30px;
+}
+
+.main_announcement article:first-child h2{ 
+  padding-top: 18px;
+}
+
+/* 메인 알림 영역 */
+.main_announcement .special_menus ul{
+  position: relative;
+  height: 121px;
+}
+
+.main_announcement article:first-child li{
+  position: absolute;  
+  width: 90px;
+  height: 90px;
+
+}
+
+.main_announcement article:first-child li a{
+  display: block;
+  height: 100%;
+}
+
+.main_announcement article:first-child li:first-child{
+  top: 0;
+  left: 0;
+}
+
+
+.main_announcement article:first-child li:first-child + li{
+  top: 0;
+  left: 50%;
+  margin-left: -45px;
+
+}
+
+.main_announcement article:first-child li:last-child{
+  top: 0;
+  right: 0;
+}
+
+
+.main_announcement article:nth-child(2){
+  margin-bottom: 25px;
+}
+
+.main_announcement article:nth-child(2) cite{
+  display: block;
+  text-align: right;
+}
+
+.main_announcement article:nth-child(3) a{
+  float: right;
+  margin-top: -5px;
+  padding: 0 15px;
+  font-size: 0.875em; /* 14/16 */
+  vertical-align: middle;
+  padding-top: 5px;
+}
+
+.main_information{
+  position: relative;
+  text-align: center;
+  padding-bottom: 1px;
+  background-image: url("../images/bg-wood.png");
+  background-size: cover;
+  color: #944e27;
+  text-shadow: white .5px .5px;
+}
+
+.main_information::before{
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  content:"";
+  display: block;
+  width: 55px;
+  height: 48px;
+  margin-left: -27.5px;
+  background-image: url("../images/riborn.png");
+  background-size: cover;
+}
+
+.main_information a{
+  color: #944e27;
+}
+
+.main_info_folder{
+  width: 17px;
+  height: 25px;
+  background-image: url("../images/folding.png");
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.main_information .main_wrapper > h2{
+  padding-top: 47px;
+  font-size: 1.375em; 
+}
+
+.main_information article{
+  padding-bottom: 10px;
+  margin-bottom: 23px;
+  border: 1px solid #ac714a;
+  border-radius: 5px;
+  line-height: 1.5em;
+}
+
+
+.main_information article h3{
+  /* text-align: center; */
+  font-size: 1.1875em; /* 19/16 */
+  margin: 10px 0 10px;
+}
+
+.main_information article p{
+  font-size: 1em;
+}
+
+.main_information article:last-child{
+  margin-bottom: 22px
+}
+
+
+/*** *** *** ***  FOOTER 영역  *** *** *** ***/
+.footer_text_shadow{
+  color: white;
+  text-shadow: #e2e0e2 1px 1px .5em;
+}
+
+.index_footer_company_intro{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  background-image: url("../images/footer_intro.png");
+  background-size: cover; 
+}
+
+.index_footer_company_intro h2,
+.index_footer_company_intro h3{
+  font-size: 1.5625em; /* 25/16 */
+}
+
+.index_footer_company_intro p{
+  font-size: 0.780625em; /* 12/16 */
+  line-height: 1.5em;
+  word-break: keep-all;
+}
+
+.global_footer_company_info{
+  background: #4c5f76;
+}
+
+
+.global_footer_links li{
+
+  float: left;
+  width: 33.3333%;
+  text-align: center;
+}
+.global_footer_links a{
+  display: block;
+  position: relative;
+  font-size: 0.75em; /* 12/16 */
+  line-height: 4em;
+  color: white;
+}
+
+.global_footer_links a::before{
+  content:"";
+  display: block;
+  /*position: absolute;
+  top: 15px;
+  left: 7px;*/
+  width: 12px;
+  height: 12px;
+  background-image: url("../images/footer_links_checkmark.png");
+}
+
+
+.global_footer_location{
+  position: relative;
+  border-top: 1px dashed black;
+}
+
+.global_footer_location::after{
+  content:"";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  width: 15px;
+  height: 24px;
+  margin-top: -12px;
+  background-image: url("../images/map_pointer.png");
+}
+
+.global_footer_location p{
+  padding-left: 50px;
+  line-height: 1.5em;
+  color: white;
+}
+
+
+.global_footer_location p:first-child{
+  padding-top: 10px;
+  font-size: 0.75em; /* 12/16 */
+}
+
+.global_footer_location p:not(:first-child){
+  padding-bottom: 10px;
+  font-size: 0.5625em; /* 9/16 */
+}
+
+.global_footer_social{
+  position: absolute;
+  top: 50%;
+  right: 26px;
+  margin-top: -15px;
+}
+
+
+.global_footer_social a{
+  float: left;
+  display:block;
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+}
+
+.global_footer_twitter{
+  background-image: url("../images/footer_twitter.png");
+  background-size: cover;
+}
+
+.global_footer_facebook{
+  background-image: url("../images/footer_facebook.png");
+  background-size: cover;
+}
+
+.global_footer_copyright{
+  background: #2b2b2b;
+}
+
+.global_footer_copyright p{
+  padding-top: 19px;
+  padding-bottom: 19px;
+  text-align: center;
+  color: #cbcbcb;
+}
+
+
+
+
+
+
+
+
+
