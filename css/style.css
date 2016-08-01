@@ -52,7 +52,7 @@ button{
 /*** *** *** ***              *** *** *** ***/
 
 
-/*** *** *** ***  HEADER ë¶€ë¶„  *** *** *** ***/
+/*** *** *** ***  HEADER 영역  *** *** *** ***/
 
 .header_gnb{
   background-image: url("../images/header-gnb-bg.png");
@@ -150,10 +150,23 @@ button{
 }
 
 .carousel_window{
-  height: 287px;
+  height: auto;
   width: 100%;
   overflow: hidden;
-  /*background: purple;*/
+}
+
+.carousel_window a{
+  display: block;
+}
+
+.carousel_window ul{
+  white-space: nowrap;
+}
+
+.carousel_window li{
+  display: inline-block;
+  width: 100%; 
+  font-size: 0;
 }
 
 .carousel_content_nav{
@@ -199,7 +212,6 @@ button{
 
 .carousel_dir_left{
   left: 0;
-  
   transform: translateY(-50%) rotate(180deg);
 }
 
@@ -346,7 +358,6 @@ button{
 
 
 .main_information article h3{
-  /* text-align: center; */
   font-size: 1.1875em; /* 19/16 */
   margin: 10px 0 10px;
 }
@@ -404,16 +415,23 @@ button{
   color: white;
 }
 
-.global_footer_links a::before{
-  content:"";
+.global_footer_links a span{
+  position: relative;
+}
+
+.global_footer_links a span::before{
+  content: "";
   display: block;
-  /*position: absolute;
-  top: 15px;
-  left: 7px;*/
+  position: absolute;
+  top: -2px;
+  left: -15px;
   width: 12px;
   height: 12px;
   background-image: url("../images/footer_links_checkmark.png");
 }
+
+/*어떤 텍스트에 항상 따라다니는 그림을 붙이고 싶다면
+그 텍스트를 요소로 감싸고 요소를 position: relative, 따라다니는 요소를 텍스트의 가상 요소로 구현해(단, 크롬같은 중요하지 않은 그림의 경우만) positon: absolute를 주도록 하자*/
 
 
 .global_footer_location{
